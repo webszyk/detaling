@@ -142,23 +142,23 @@
                         <path d="M3 13h2l3 7h8l3-7h2" opacity=".35"></path>
                         <path d="M5 13l3-6h8l3 6H5z"></path>
                     </svg>
-                    <span class="font-heading font-semibold text-lg tracking-wide">Detailing Wrocław</span>
+                    <span class="font-heading font-semibold text-lg tracking-wide">Zaleski Wrocław</span>
                 </a>
 
                 <nav class="hidden lg:flex items-center gap-8" aria-label="Główne">
-                    <a href="#o-nas" class="text-sm hover:text-white/90">O nas</a>
-                    <a href="#proces" class="text-sm hover:text-white/90">Proces</a>
-                    <a href="#uslugi" class="text-sm hover:text-white/90">Usługi</a>
-                    <a href="#galeria" class="text-sm hover:text-white/90">Galeria</a>
-                    <a href="#cennik" class="text-sm hover:text-white/90">Cennik</a>
-                    <a href="#opinie" class="text-sm hover:text-white/90">Opinie</a>
-                    <a href="#kontakt" class="text-sm hover:text-white/90">Kontakt</a>
-                    <a href="#dojazd" class="text-sm hover:text-white/90">Dojazd</a>
+                    <a href="#o-nas" class="text-sm hover:text-accent-hover">O nas</a>
+                    <a href="#proces" class="text-sm hover:text-accent-hover">Proces</a>
+                    <a href="#uslugi" class="text-sm hover:text-accent-hover">Usługi</a>
+                    <a href="#galeria" class="text-sm hover:text-accent-hover">Galeria</a>
+                    <a href="#cennik" class="text-sm hover:text-accent-hover">Cennik</a>
+                    <a href="#opinie" class="text-sm hover:text-accent-hover">Opinie</a>
+                    <a href="#kontakt" class="text-sm hover:text-accent-hover">Kontakt</a>
+                    <a href="#dojazd" class="text-sm hover:text-accent-hover">Dojazd</a>
                 </nav>
 
                 <div class="hidden lg:flex items-center gap-3">
                     <a href="#kontakt"
-                        class="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-black shadow-glow hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent/50 btn-shine">
+                        class="inline-flex items-center gap-2 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-black shadow-glow hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent/50 btn-shine">
                         <i class="fa-solid fa-calendar-check"></i>
                         Umów wizytę
                     </a>
@@ -166,7 +166,7 @@
 
                 <!-- Mobile menu button -->
                 <button @click="open = !open" :aria-expanded="open" aria-controls="mobile-menu"
-                    class="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-accent/60"
+                    class="lg:hidden inline-flex items-center justify-center rounded-xl p-2 text-gray-200 hover:text-accent-hover focus:outline-none focus:ring-2 focus:ring-accent/60"
                     aria-label="Otwórz menu">
                     <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
@@ -186,23 +186,23 @@
         <div id="mobile-menu" x-show="open" x-cloak x-transition.opacity x-transition.duration.200ms
             class="lg:hidden border-t border-white/10 bg-black/90">
             <div class="space-y-1 px-4 py-4">
-                <a @click="open=false" href="#o-nas" class="block rounded px-3 py-2 text-sm hover:bg-white/10">O nas</a>
+                <a @click="open=false" href="#o-nas" class="block rounded px-3 py-2 text-sm hover:text-accent-hover">O nas</a>
                 <a @click="open=false" href="#proces"
-                    class="block rounded px-3 py-2 text-sm hover:bg-white/10">Proces</a>
+                    class="block rounded px-3 py-2 text-sm hover:text-accent-hover">Proces</a>
                 <a @click="open=false" href="#uslugi"
-                    class="block rounded px-3 py-2 text-sm hover:bg-white/10">Usługi</a>
+                    class="block rounded px-3 py-2 text-sm hover:text-accent-hover">Usługi</a>
                 <a @click="open=false" href="#galeria"
-                    class="block rounded px-3 py-2 text-sm hover:bg-white/10">Galeria</a>
+                    class="block rounded px-3 py-2 text-sm hover:text-accent-hover0">Galeria</a>
                 <a @click="open=false" href="#cennik"
-                    class="block rounded px-3 py-2 text-sm hover:bg-white/10">Cennik</a>
+                    class="block rounded px-3 py-2 text-sm hover:text-accent-hover">Cennik</a>
                 <a @click="open=false" href="#opinie"
-                    class="block rounded px-3 py-2 text-sm hover:bg-white/10">Opinie</a>
+                    class="block rounded px-3 py-2 text-sm hover:text-accent-hover">Opinie</a>
                 <a @click="open=false" href="#kontakt"
-                    class="block rounded px-3 py-2 text-sm hover:bg-white/10">Kontakt</a>
+                    class="block rounded px-3 py-2 text-sm hover:text-accent-hover">Kontakt</a>
                 <a @click="open=false" href="#dojazd"
-                    class="block rounded px-3 py-2 text-sm hover:bg-white/10">Dojazd</a>
+                    class="block rounded px-3 py-2 text-sm hover:text-accent-hover">Dojazd</a>
                 <a @click="open=false" href="#kontakt"
-                    class="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white shadow-glow hover:bg-accent-hover">
+                    class="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white shadow-glow hover:bg-accent-hover">
                     <i class="fa-solid fa-calendar-check"></i>
                     Umów wizytę
                 </a>
@@ -219,28 +219,28 @@
                 <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/40 to-black/80"></div>
                 <!-- Aurora gradient -->
                 <div
-                    class="absolute -top-24 right-0 h-80 w-80 rounded-full bg-gradient-to-tr from-accent/30 via-white/10 to-transparent aurora">
+                    class="absolute -top-24 right-0 h-80 w-80 rounded-xl bg-gradient-to-tr from-accent/30 via-white/10 to-transparent aurora">
                 </div>
                 <div
-                    class="absolute bottom-0 -left-10 h-96 w-96 rounded-full bg-gradient-to-tr from-accent/40 via-white/10 to-transparent aurora">
+                    class="absolute bottom-0 -left-10 h-96 w-96 rounded-xl bg-gradient-to-tr from-accent/40 via-white/10 to-transparent aurora">
                 </div>
             </div>
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
                 <div class="max-w-3xl">
                     <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-                        Profesjonalny Detailing we Wrocławiu
+                        Pielęgnacja aut we Wrocławiu
                     </h1>
                     <p class="mt-6 text-lg text-gray-200">
-                        Przywracamy blask Twojemu samochodowi – precyzja, pasja i najwyższa jakość usług.
+                        Przywracamy blask Twojemu samochodowi – precyzja, pasja i najwyższa jakość usług detalingu.
                     </p>
                     <div class="mt-10 flex flex-col sm:flex-row gap-3">
                         <a href="#uslugi"
-                            class="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-base font-semibold text-black shadow-glow hover:bg-accent-hover btn-shine">
+                            class="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 text-base font-semibold text-black shadow-glow hover:bg-accent-hover btn-shine">
                             <i class="fa-solid fa-list-check"></i>
                             Zobacz ofertę
                         </a>
                         <a href="#kontakt"
-                            class="inline-flex items-center justify-center gap-2 rounded-md border border-accent/50 px-6 py-3 text-base font-semibold text-white hover:bg-accent/10">
+                            class="inline-flex items-center justify-center gap-2 rounded-xl border border-accent/50 px-6 py-3 text-base font-semibold text-white hover:bg-accent/10">
                             <i class="fa-solid fa-phone"></i>
                             Skontaktuj się
                         </a>
@@ -256,58 +256,58 @@
                 <p class="mt-3 text-gray-300">Przykładowe ceny „od”. Dokładną wycenę przygotujemy po krótkiej
                     konsultacji.</p>
                 <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-6">
                         <h3 class="font-medium">Mycie detailingowe</h3>
                         <p class="mt-2 text-sm text-gray-300">od <span class="text-accent font-semibold">199 zł</span>
                         </p>
                     </div>
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-6">
                         <h3 class="font-medium">Korekta lakieru</h3>
                         <p class="mt-2 text-sm text-gray-300">od <span class="text-accent font-semibold">799 zł</span>
                         </p>
                     </div>
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-6">
                         <h3 class="font-medium">Powłoka ceramiczna</h3>
                         <p class="mt-2 text-sm text-gray-300">od <span class="text-accent font-semibold">1299 zł</span>
                         </p>
                     </div>
                 </div>
                 <div class="mt-10 grid lg:grid-cols-2 gap-12 items-start">
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-6">
                         <h3 class="font-medium">Poproś o indywidualną ofertę</h3>
                         <form class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <input class="rounded-md border border-white/10 bg-black/40 px-3 py-2" placeholder="Imię"
+                            <input class="rounded-xl border border-white/10 bg-black/60 px-3 py-2" placeholder="Imię"
                                 required />
-                            <input type="email" class="rounded-md border border-white/10 bg-black/40 px-3 py-2"
+                            <input type="email" class="rounded-xl border border-white/10 bg-black/60 px-3 py-2"
                                 placeholder="E-mail" required />
-                            <input class="rounded-md border border-white/10 bg-black/40 px-3 py-2"
+                            <input class="rounded-xl border border-white/10 bg-black/60 px-3 py-2"
                                 placeholder="Telefon" />
-                            <input class="rounded-md border border-white/10 bg-black/40 px-3 py-2"
+                            <input class="rounded-xl border border-white/10 bg-black/60 px-3 py-2"
                                 placeholder="Marka/Model" />
-                            <input class="rounded-md border border-white/10 bg-black/40 px-3 py-2"
+                            <input class="rounded-xl border border-white/10 bg-black/60 px-3 py-2"
                                 placeholder="Rok produkcji" />
-                            <input class="rounded-md border border-white/10 bg-black/40 px-3 py-2"
+                            <input class="rounded-xl border border-white/10 bg-black/60 px-3 py-2"
                                 placeholder="Zakres usług / budżet" />
-                            <textarea class="sm:col-span-2 rounded-md border border-white/10 bg-black/40 px-3 py-2"
+                            <textarea class="sm:col-span-2 rounded-3xl border border-white/10 bg-black/60 px-3 py-2"
                                 rows="4" placeholder="Wiadomość"></textarea>
                             <div class="sm:col-span-2 flex items-center gap-2 text-sm text-gray-300">
                                 <input type="checkbox" required class="h-4 w-4 rounded border-white/20 bg-black/50" />
                                 <span>Wyrażam zgodę na przetwarzanie danych w celu kontaktu.</span>
                             </div>
                             <button
-                                class="sm:col-span-2 inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-hover btn-shine"
+                                class="sm:col-span-2 inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-hover btn-shine"
                                 type="submit"><i class="fa-solid fa-receipt"></i>Uzyskaj bezpłatną wycenę</button>
                         </form>
                     </div>
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/100 bg-white/[0.65] p-6">
                         <p class="text-gray-300">Ceny zależą od stanu lakieru, rozmiaru auta i oczekiwanego efektu.
                             Zadzwoń – doradzimy najlepszy wariant.</p>
                         <div class="mt-4 flex gap-3">
                             <a href="tel:+48123456789"
-                                class="inline-flex items-center gap-2 rounded-md border border-accent/50 px-4 py-2 text-sm hover:bg-accent/10"><i
+                                class="inline-flex items-center gap-2 rounded-xl border border-accent/50 px-4 py-2 text-sm bg-accent/20 hover:bg-accent/80"><i
                                     class="fa-solid fa-phone"></i>Zadzwoń</a>
                             <a href="#kontakt"
-                                class="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-black hover:bg-accent-hover btn-shine"><i
+                                class="inline-flex items-center gap-2 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-black hover:bg-accent-hover btn-shine"><i
                                     class="fa-solid fa-paper-plane"></i>Napisz</a>
                         </div>
                     </div>
@@ -323,16 +323,16 @@
         ]}" class="py-24">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div
-                    class="relative overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-br from-white/20 via-white/10 to-transparent">
+                    class="relative overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-br from-white/60 via-white/10 to-transparent">
                     <div class="absolute inset-0 pointer-events-none">
-                        <div class="aurora absolute -top-10 -left-10 h-60 w-60 rounded-full bg-accent/30"></div>
-                        <div class="aurora absolute bottom-0 -right-10 h-72 w-72 rounded-full bg-accent/20"></div>
+                        <div class="aurora absolute -top-10 -left-10 h-60 w-60 rounded-xl bg-accent/55"></div>
+                        <div class="aurora absolute bottom-0 -right-10 h-72 w-72 rounded-xl bg-accent/66"></div>
                     </div>
                     <div class="p-8 sm:p-12 lg:p-16 relative">
                         <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10">
                             <div class="flex items-center gap-4">
                                 <div
-                                    class="h-16 w-16 rounded-full bg-white flex items-center justify-center ring-1 ring-accent/40 shadow">
+                                    class="h-16 w-16 rounded-xl bg-white flex items-center justify-center ring-1 ring-accent/40 shadow">
                                     <i class="fa-solid fa-user text-accent text-xl"></i>
                                 </div>
                                 <div>
@@ -342,7 +342,7 @@
                             </div>
                             <div class="ml-auto">
                                 <a href="#kontakt"
-                                    class="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-hover btn-shine">
+                                    class="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-hover btn-shine">
                                     <i class="fa-solid fa-message"></i> Umów konsultację
                                 </a>
                             </div>
@@ -360,7 +360,7 @@
                                                         class="rounded-2xl bg-white p-6 text-gray-900 shadow-xl ring-1 ring-accent/20">
                                                         <div class="flex items-center gap-4">
                                                             <div
-                                                                class="h-12 w-12 rounded-full bg-white ring-1 ring-accent/30 flex items-center justify-center overflow-hidden">
+                                                                class="h-12 w-12 rounded-xl bg-white ring-1 ring-accent/30 flex items-center justify-center overflow-hidden">
                                                                 <i class="fa-solid fa-user text-accent"
                                                                     aria-hidden="true"></i>
                                                                 <img :src="it.avatar" alt="Klient"
@@ -401,26 +401,26 @@
 
                             <div class="mt-6 flex items-center justify-between">
                                 <div class="flex gap-2">
-                                    <button class="h-3 w-3 rounded-full bg-white/60 ring-1 ring-accent/40"
+                                    <button class="h-3 w-3 rounded-xl bg-white/160 ring-2 ring-accent/70"
                                         :class="{ 'bg-accent': i===0 }" @click="i=0"></button>
-                                    <button class="h-3 w-3 rounded-full bg-white/60 ring-1 ring-accent/40"
+                                    <button class="h-3 w-3 rounded-xl bg-white/160 ring-2 ring-accent/70"
                                         :class="{ 'bg-accent': i===1 }" @click="i=1"></button>
-                                    <button class="h-3 w-3 rounded-full bg-white/60 ring-1 ring-accent/40"
+                                    <button class="h-3 w-3 rounded-xl bg-white/160 ring-2 ring-accent/70"
                                         :class="{ 'bg-accent': i===2 }" @click="i=2"></button>
                                 </div>
                                 <div class="flex gap-3">
                                     <button @click="i = (i-1+items.length)%items.length"
-                                        class="rounded-full bg-accent text-black p-3.5 md:p-4 shadow-glow hover:bg-accent-hover"><i
+                                        class="rounded-xl bg-accent text-black p-3.5 md:p-4 shadow-glow hover:bg-accent-hover"><i
                                             class="fa-solid fa-chevron-left"></i></button>
                                     <button @click="i = (i+1)%items.length"
-                                        class="rounded-full bg-accent text-black p-3.5 md:p-4 shadow-glow hover:bg-accent-hover"><i
+                                        class="rounded-xl bg-accent text-black p-3.5 md:p-4 shadow-glow hover:bg-accent-hover"><i
                                             class="fa-solid fa-chevron-right"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white"><i
+                <a href="https://www.google.com/search?sxsrf=AE3TifPGQIVL4UMMHIqY7BAN1L__LB7BLA:1758996865427&q=zaleski+detaling&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E0vSY7ru9XlUy7N8Pfxa2AT5oVEC2wWHUBTBQJezwVEb6dAe7hSLYBwPSKDA-IlP0Izqg68%3D&uds=AOm0WdFRPqUD_qV0CCvuvWYUkCS3MCXsYW1mn_2Vq3maClPA43IRIUDdX2ViIiJ1LJ9IRYYeDPyFsdmAhacYFdFTGvMybTgFSl_kmXeTkbI_gThJw8JclN0" class="mt-6 inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white"><i
                         class="fa-brands fa-google"></i>Zobacz więcej opinii w Google</a>
             </div>
         </section>
@@ -435,15 +435,15 @@
                         <p class="mt-4 text-gray-300">Jesteśmy mistrzami precyzji i pasji na obrzeżach Wrocławia. Poznaj
                             naszą historię i filozofię pracy – transparentnie i z sercem.</p>
                         <div class="mt-6 grid grid-cols-3 gap-4">
-                            <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-4 text-center">
+                            <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-4 text-center">
                                 <p class="text-3xl font-heading font-semibold text-accent">500+</p>
                                 <p class="text-xs text-gray-300">Zadowolonych klientów</p>
                             </div>
-                            <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-4 text-center">
+                            <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-4 text-center">
                                 <p class="text-3xl font-heading font-semibold text-accent">10</p>
                                 <p class="text-xs text-gray-300">Lat doświadczenia</p>
                             </div>
-                            <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-4 text-center">
+                            <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-4 text-center">
                                 <p class="text-3xl font-heading font-semibold text-accent">4.9/5</p>
                                 <p class="text-xs text-gray-300">Średnia ocena Google</p>
                             </div>
@@ -489,7 +489,7 @@
                             src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1200&auto=format&fit=crop"
                             alt="Studio detailingowe – wnętrze" />
                         <div class="absolute -bottom-6 -right-6 hidden sm:block">
-                            <img class="w-48 rounded-lg ring-1 ring-white/10"
+                            <img class="w-60 rounded-lg ring-1 ring-white/10"
                                 src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=800&auto=format&fit=crop"
                                 alt="Szczegół detailingu" />
                         </div>
@@ -505,31 +505,31 @@
                 <p class="mt-3 text-gray-300">Transparentny proces w 5 krokach – od konsultacji po finalną kontrolę
                     jakości.</p>
                 <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-6">
                         <div class="flex items-center gap-3"><i class="fa-solid fa-comments text-accent"></i>
                             <h3 class="font-medium">Konsultacja</h3>
                         </div>
                         <p class="mt-2 text-sm text-gray-300">Zrozumienie potrzeb, wstępna wycena, dobór zakresu.</p>
                     </div>
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-6">
                         <div class="flex items-center gap-3"><i class="fa-solid fa-bucket text-accent"></i>
                             <h3 class="font-medium">Przygotowanie</h3>
                         </div>
-                        <p class="mt-2 text-sm text-gray-300">Mycie, dekontaminacja, oklejenie elementów wrażliwych.</p>
+                        <p class="mt-2 text-sm text-gray-200">Mycie, dekontaminacja, oklejenie elementów wrażliwych.</p>
                     </div>
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-6">
                         <div class="flex items-center gap-3"><i class="fa-solid fa-wand-magic-sparkles text-accent"></i>
                             <h3 class="font-medium">Aplikacja</h3>
                         </div>
                         <p class="mt-2 text-sm text-gray-300">Korekta lakieru, ceramika lub detailing wnętrza.</p>
                     </div>
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-6">
                         <div class="flex items-center gap-3"><i class="fa-solid fa-magnifying-glass text-accent"></i>
                             <h3 class="font-medium">Kontrola</h3>
                         </div>
                         <p class="mt-2 text-sm text-gray-300">Wielopunktowa kontrola jakości i wykończenie.</p>
                     </div>
-                    <div class="rounded-xl border border-accent/20 bg-white/[0.06] p-6">
+                    <div class="rounded-xl border border-accent/160 bg-white/[0.25] p-6">
                         <div class="flex items-center gap-3"><i class="fa-solid fa-hands-clapping text-accent"></i>
                             <h3 class="font-medium">Finalizacja</h3>
                         </div>
@@ -548,7 +548,7 @@
                         <p class="mt-3 text-gray-300">Wybierz zakres prac dopasowany do potrzeb Twojego auta.</p>
                     </div>
                     <a href="#kontakt"
-                        class="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-black shadow-glow hover:bg-accent-hover btn-shine">
+                        class="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-black shadow-glow hover:bg-accent-hover btn-shine">
                         <i class="fa-solid fa-pen-to-square"></i>
                         Zapytaj o wycenę
                     </a>
@@ -695,8 +695,8 @@
 
                 <!-- Contact hook under services -->
                 <div
-                    class="mt-12 relative overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-r from-accent/20 via-accent/10 to-transparent p-6 sm:p-8 lg:p-10">
-                    <div class="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-accent/20 blur-2xl"></div>
+                    class="mt-12 relative overflow-hidden rounded-2xl border border-accent/100 bg-gradient-to-r from-accent/20 via-accent/10 to-transparent p-6 sm:p-8 lg:p-10">
+                    <div class="absolute -right-8 -top-8 h-40 w-40 rounded-xl bg-accent/160 blur-2xl"></div>
                     <div class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
                         <div>
                             <h3 class="font-heading text-2xl font-semibold">Nie wiesz, którą usługę wybrać?</h3>
@@ -704,11 +704,11 @@
                         </div>
                         <div class="flex flex-wrap gap-3">
                             <a href="tel:+48123456789"
-                                class="inline-flex items-center gap-2 rounded-md border border-accent/50 px-4 py-2 text-sm text-white hover:bg-accent/10">
+                                class="inline-flex items-center gap-2 rounded-xl border border-accent/80 px-4 py-2 text-sm text-white hover:bg-accent/160">
                                 <i class="fa-solid fa-phone"></i>Zadzwoń teraz
                             </a>
                             <a href="#kontakt"
-                                class="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-black hover:bg-accent-hover btn-shine">
+                                class="inline-flex items-center gap-2 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-black hover:bg-accent-hover btn-shine">
                                 <i class="fa-solid fa-paper-plane"></i>Wyślij zapytanie
                             </a>
                         </div>
@@ -726,14 +726,14 @@
                                 <h3 class="font-heading text-2xl font-semibold" x-text="title"></h3>
                                 <p class="mt-2 text-gray-200" x-text="description"></p>
                             </div>
-                            <button @click="close()" class="rounded p-2 text-gray-300 hover:bg-white/10"
+                            <button @click="close()" class="rounded p-2 text-gray-300 hover:text-accent-hover"
                                 aria-label="Zamknij">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
                         <div class="mt-6">
                             <a href="#kontakt"
-                                class="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-hover">
+                                class="inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-hover">
                                 <i class="fa-solid fa-paper-plane"></i>
                                 Zapytaj o termin
                             </a>
@@ -755,7 +755,7 @@
                     <template x-for="(img, idx) in images" :key="idx">
                         <button @click="open(idx)" class="group relative reveal" x-data
                             x-init="$nextTick(()=>{ const el=$el; const io=new IntersectionObserver(([e])=>{ if(e.isIntersecting){ el.classList.add('revealed'); io.disconnect(); }},{threshold:.15}); io.observe(el); });">
-                            <img class="h-40 w-full rounded object-cover ring-1 ring-accent/30"
+                            <img class="h-40 w-full rounded object-cover ring-2 ring-accent/50"
                                 :src="img.replace('/1200/800','/600/400')" :alt="`Realizacja ${idx+1}`" />
                             <span
                                 class="pointer-events-none absolute inset-0 rounded bg-black/0 group-hover:bg-black/20 transition"></span>
@@ -769,19 +769,19 @@
                     role="dialog" aria-modal="true" @click.self="close()" @keydown.window.escape="close()"
                     @keydown.window.arrow-right="next()" @keydown.window.arrow-left="prev()">
                     <button @click="close()"
-                        class="absolute top-4 right-4 z-10 rounded p-2 text-gray-200 hover:bg-white/10"
+                        class="absolute top-4 right-4 z-10 rounded-xl p-2 text-gray-200 hover:bg-white/160"
                         aria-label="Zamknij podgląd">
                         <i class="fa-solid fa-xmark fa-lg"></i>
                     </button>
                     <button @click="prev()"
-                        class="absolute left-4 md:left-6 z-10 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
+                        class="absolute left-4 md:left-6 z-10 rounded-xl bg-white/10 p-3 text-white hover:bg-white/20"
                         aria-label="Poprzednie zdjęcie">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
                     <img :src="src" alt="Podgląd realizacji"
                         class="max-h-[80vh] max-w-5xl rounded shadow-2xl ring-1 ring-white/20" />
                     <button @click="next()"
-                        class="absolute right-4 md:right-6 z-10 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
+                        class="absolute right-4 md:right-6 z-10 rounded-xl bg-white/120 p-3 text-white hover:bg-white/20"
                         aria-label="Następne zdjęcie">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
@@ -809,31 +809,31 @@
                                 9:00–18:00, Sob: 9:00–14:00</p>
                         </div>
                     </div>
-                    <form class="rounded-xl border border-accent/20 bg-white/[0.06] p-6 backdrop-blur reveal" x-data
+                    <form class="rounded-xl border border-accent/160 bg-white/[0.06] p-6 backdrop-blur reveal" x-data
                         x-init="$nextTick(()=>{ const el=$el; const io=new IntersectionObserver(([e])=>{ if(e.isIntersecting){ el.classList.add('revealed'); io.disconnect(); }},{threshold:.15}); io.observe(el); });">
                         <div class="grid grid-cols-1 gap-4">
                             <div>
                                 <label for="name" class="block text-sm font-medium">Imię</label>
                                 <input id="name" name="name" type="text" required
-                                    class="mt-1 w-full rounded-md border border-white/10 bg-black/40 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-accent focus:outline-none"
+                                    class="mt-1 w-full rounded-xl border border-white/30 bg-black/60 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-accent focus:outline-none"
                                     placeholder="Twoje imię" />
                             </div>
                             <div>
                                 <label for="email" class="block text-sm font-medium">E-mail</label>
                                 <input id="email" name="email" type="email" required
-                                    class="mt-1 w-full rounded-md border border-white/10 bg-black/40 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-accent focus:outline-none"
+                                    class="mt-1 w-full rounded-xl border border-white/30 bg-black/60 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-accent focus:outline-none"
                                     placeholder="twoj@email.pl" />
                             </div>
                             <div>
                                 <label for="phone" class="block text-sm font-medium">Telefon</label>
                                 <input id="phone" name="phone" type="tel"
-                                    class="mt-1 w-full rounded-md border border-white/10 bg-black/40 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-accent focus:outline-none"
+                                    class="mt-1 w-full rounded-xl border border-white/30 bg-black/60 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-accent focus:outline-none"
                                     placeholder="+48 ..." />
                             </div>
                             <div>
                                 <label for="message" class="block text-sm font-medium">Wiadomość</label>
                                 <textarea id="message" name="message" rows="4" required
-                                    class="mt-1 w-full rounded-md border border-white/10 bg-black/40 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-accent focus:outline-none"
+                                    class="mt-1 w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 text-gray-100 placeholder-gray-400 focus:border-accent focus:outline-none"
                                     placeholder="Opisz krótko czego potrzebujesz..."></textarea>
                             </div>
                             <div class="flex items-start gap-2 text-sm text-gray-300">
@@ -843,7 +843,7 @@
                                     kontaktu.</label>
                             </div>
                             <button type="submit"
-                                class="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-hover btn-shine">
+                                class="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-hover btn-shine">
                                 <i class="fa-solid fa-paper-plane"></i>
                                 Wyślij
                             </button>
@@ -864,9 +864,9 @@
                             <p><strong>Adres:</strong> ul. Przykładowa 10, 55-010 Wrocław – okolice</p>
                             <p><strong>Wskazówka:</strong> Warsztat za stacją paliw, wjazd bramą po lewej.</p>
                         </div>
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=51.1079,17.0385" target="_blank"
+                        <a href="https://www.google.com/maps?sca_esv=43c4ab87ea7f1f9b&sxsrf=AE3TifPGQIVL4UMMHIqY7BAN1L__LB7BLA:1758996865427&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E0vSY7ru9XlUy7N8Pfxa2AT5oVEC2wWHUBTBQJezwVEb6dAe7hSLYBwPSKDA-IlP0Izqg68%3D&uds=AOm0WdFRPqUD_qV0CCvuvWYUkCS3MCXsYW1mn_2Vq3maClPA43IRIUDdX2ViIiJ1LJ9IRYYeDPyFsdmAhacYFdFTGvMybTgFSl_kmXeTkbI_gThJw8JclN0&biw=1920&bih=917&dpr=1&um=1&ie=UTF-8&fb=1&gl=pl&sa=X&geocode=KcPTeL186w9HMb3j4dZcMu6x&daddr=Brodzka+10C,+54-103+Wroc%C5%82aw" target="_blank"
                             rel="noopener"
-                            class="mt-6 inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2 text-sm hover:bg-white/10">
+                            class="mt-6 inline-flex items-center gap-2 rounded-xl border border-white/20 px-4 py-2 text-sm hover:text-accent-hover">
                             <i class="fa-solid fa-route"></i>
                             Wyznacz trasę w Google Maps
                         </a>
@@ -915,11 +915,11 @@
                 <div>
                     <h3 class="font-medium">Obserwuj</h3>
                     <div class="mt-3 flex gap-3 text-gray-300">
-                        <a href="#" aria-label="Instagram" class="rounded p-2 hover:bg-white/10"><i
+                        <a href="#" aria-label="Instagram" class="rounded p-2 hover:text-accent-hover"><i
                                 class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook" class="rounded p-2 hover:bg-white/10"><i
+                        <a href="#" aria-label="Facebook" class="rounded p-2 hover:text-accent-hover"><i
                                 class="fa-brands fa-facebook"></i></a>
-                        <a href="#" aria-label="YouTube" class="rounded p-2 hover:bg-white/10"><i
+                        <a href="#" aria-label="YouTube" class="rounded p-2 hover:text-accent-hover"><i
                                 class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
