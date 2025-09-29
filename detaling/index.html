@@ -273,6 +273,7 @@
                         <p class="mt-2 text-sm text-gray-300">od <span class="text-accent font-semibold">1299 zł</span>
                         </p>
                     </div>
+                    
                 </div>
                 <div class="mt-10 grid lg:grid-cols-2 gap-12 items-start">
                     <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
@@ -302,34 +303,41 @@
                         </form>
                     </div>
                     <div class="rounded-3xl border border-accent/100 bg-white/[0.65] p-6 flex flex-col gap-6">
-    <div>
-        <p class="text-gray-300">Ceny zależą od stanu lakieru, rozmiaru auta i oczekiwanego efektu.
-            Zadzwoń – doradzimy najlepszy wariant.</p>
-        <div class="mt-4 flex gap-3">
-            <a href="tel:+48123456789"
-                class="inline-flex items-center gap-2 rounded-3xl border border-accent/50 px-4 py-2 text-sm bg-accent/20 hover:bg-accent/80"><i
-                    class="fa-solid fa-phone"></i>Zadzwoń</a>
-            <a href="#kontakt"
-                class="inline-flex items-center gap-2 rounded-3xl bg-accent px-4 py-2 text-sm font-semibold text-black hover:bg-accent-hover btn-shine"><i
-                    class="fa-solid fa-paper-plane"></i>Napisz</a>
-        </div>
-    </div>
+                    <div>
+                        <p class="text-gray-300">Ceny zależą od stanu lakieru, rozmiaru auta i oczekiwanego efektu.
+                            Zadzwoń – doradzimy najlepszy wariant.</p>
+                        <div class="mt-4 flex gap-3">
+                            <a href="tel:+48123456789"
+                                class="inline-flex items-center gap-2 rounded-3xl border border-accent/50 px-4 py-2 text-sm bg-accent/20 hover:bg-accent/80"><i
+                                    class="fa-solid fa-phone"></i>Zadzwoń</a>
+                            <a href="#kontakt"
+                                class="inline-flex items-center gap-2 rounded-3xl bg-accent px-4 py-2 text-sm font-semibold text-black hover:bg-accent-hover btn-shine"><i
+                                    class="fa-solid fa-paper-plane"></i>Napisz</a>
+                        </div>
+                    </div>
+                    <!-- Voucher 3D Component -->
+                        <div x-data="{rotateX:0, rotateY:0}" 
+                            @mousemove="rotateY = ($event.offsetX - $el.offsetWidth/2)/20; rotateX = -($event.offsetY - $el.offsetHeight/2)/20" 
+                            @mouseleave="rotateX=0; rotateY=0"
+                            class="relative w-full flex justify-center perspective-1000">
 
-    <!-- Voucher box -->
-    <div class="rounded-3xl border border-accent/80 bg-black/40 p-6 text-center shadow-lg hover:scale-[1.02] transition-transform duration-300">
-            <h4 class="font-semibold text-lg text-accent mb-3">Voucher na detailing</h4>
-            <img src="/images/voucher-placeholder.jpg" alt="Voucher detailingowy" 
-                class="mx-auto rounded-3xl shadow-lg mb-4 max-h-40 object-contain">
-            <p class="text-gray-300 text-sm mb-4">
-                Idealny prezent dla bliskiej osoby lub sposób na rezerwację usługi z wyprzedzeniem.
-            </p>
-            <a href="#voucher" 
-            class="inline-flex items-center gap-2 rounded-3xl bg-black px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-hover btn-shine">
-                <i class="fa-solid fa-gift"></i>Kup voucher online
-            </a>
-        </div>
-    </div>
-                    
+                            <!-- Karta -->
+                            <div class="relative w-72 h-48 rounded-2xl shadow-2xl transition-transform duration-300"
+                                :style="`transform: rotateX(${rotateX}deg) rotateY(${rotateY}deg)`">
+
+                                <!-- Obraz vouchera -->
+                                <img src="./img/voucherwww.png" alt="Voucher detailingowy"
+                                    class="absolute inset-0 w-full h-full object-contain rounded-2xl shadow-[0_0_40px_rgba(255,215,0,0.6)]" />
+                            </div>
+                        </div>
+
+                            <!-- CTA -->
+                            <div class="mt-6 text-center">
+                                <a href="#voucher" 
+                                class="inline-flex items-center gap-2 rounded-3xl bg-gradient-to-r from-accent to-yellow-400 px-6 py-3 text-sm font-bold text-black shadow-lg hover:scale-105 transition">
+                                <i class="fa-solid fa-gift"></i>Kup voucher online
+                                </a>
+                            </div>
                 </div>
             </div>
         </section>
@@ -411,7 +419,7 @@
                                                         
                                                         <!-- Ikona 3D placeholder -->
                                                         <div class="absolute inset-0 flex items-center justify-center opacity-50">
-                                                            <img src="/images/3d-car-placeholder.png" alt="Ikona 3D auta"
+                                                            <img src="/img/voucherwww.png" alt="Ikona 3D auta"
                                                                 class="h-24 w-24 object-contain drop-shadow-lg">
                                                         </div>
 
@@ -431,7 +439,7 @@
                                     <!-- Kropki -->
                                     <div class="flex gap-2">
                                         <template x-for="(it, idx) in items" :key="idx">
-                                            <button class="h-3 w-3 rounded-full bg-white/40 ring-2 ring-accent/70"
+                                            <button class="h-3 w-3 rounded-full bg-white/140 ring-2 ring-accent/70"
                                                 :class="{ 'bg-accent': i===idx }"
                                                 @click="i=idx"></button>
                                         </template>
@@ -1080,6 +1088,8 @@
             }
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+
 </body>
 
 </html>
