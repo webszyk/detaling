@@ -251,6 +251,8 @@
             </div>
         </section>
 
+        
+
         <!-- Cennik i wycena -->
         <section id="cennik" class="py-20">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -338,251 +340,6 @@
                                 <i class="fa-solid fa-gift"></i>Kup voucher online
                                 </a>
                             </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Opinie - Premium Hook -->
-        <section id="opinie" x-data="{i:0, items:[
-            {name:'Pani Anna', place:'Wrocław-Krzyki', text:'Efekt przerósł oczekiwania – lakier wygląda jak nowy!', avatar:'https://picsum.photos/seed/rev-a/96/96', photo:'https://picsum.photos/seed/car-a/640/360'},
-            {name:'Pan Marek', place:'Bielany Wrocławskie', text:'Świetny kontakt i doradztwo. Auto wygląda premium.', avatar:'https://picsum.photos/seed/rev-b/96/96', photo:'https://picsum.photos/seed/car-b/640/360'},
-            {name:'Pani Ola', place:'Wrocław-Psie Pole', text:'Ceramika robi robotę, utrzymanie auta to bajka.', avatar:'https://picsum.photos/seed/rev-c/96/96', photo:'https://picsum.photos/seed/car-c/640/360'}
-        ]}" class="py-24">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="relative overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-br from-white/60 via-white/10 to-transparent">
-                    
-                    <!-- Efekty tła -->
-                    <div class="absolute inset-0 pointer-events-none">
-                        <div class="aurora absolute -top-10 -left-10 h-60 w-60 rounded-3xl bg-accent/55"></div>
-                        <div class="aurora absolute bottom-0 -right-10 h-72 w-72 rounded-3xl bg-accent/66"></div>
-                    </div>
-
-                    <div class="p-8 sm:p-12 lg:p-16 relative">
-                        
-                        <!-- Nagłówek -->
-                        <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10">
-                            <div class="flex items-center gap-4">
-                                <div class="h-16 w-16 rounded-3xl bg-white flex items-center justify-center ring-1 ring-accent/40 shadow">
-                                    <i class="fa-solid fa-user text-accent text-xl"></i>
-                                </div>
-                                <div>
-                                    <h2 class="font-heading text-3xl sm:text-4xl font-semibold">Opinie klientów</h2>
-                                    <p class="text-gray-300 mt-1">Zaufanie budujemy efektami i relacją.</p>
-                                </div>
-                            </div>
-                            <div class="ml-auto">
-                                <a href="#kontakt"
-                                    class="inline-flex items-center gap-2 rounded-3xl bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-hover btn-shine">
-                                    <i class="fa-solid fa-message"></i> Umów konsultację
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Slider -->
-                        <div class="mt-10 relative">
-                            <div class="overflow-hidden">
-                                <div class="flex transition-transform duration-500"
-                                    :style="`transform: translateX(-${i*100}%);`">
-                                    
-                                    <!-- Opinie -->
-                                    <template x-for="(it, idx) in items" :key="idx">
-                                        <div class="min-w-full">
-                                            <div class="grid lg:grid-cols-5 gap-8 items-center">
-                                                
-                                                <!-- Tekst opinii -->
-                                                <div class="lg:col-span-3">
-                                                    <div class="rounded-2xl bg-white p-6 text-gray-900 shadow-xl ring-1 ring-accent/20">
-                                                        <div class="flex items-center gap-4">
-                                                            <div class="h-12 w-12 rounded-3xl bg-white ring-1 ring-accent/30 flex items-center justify-center overflow-hidden">
-                                                                <img :src="it.avatar" alt="Klient"
-                                                                    class="h-full w-full object-cover rounded-full" />
-                                                            </div>
-                                                            <div>
-                                                                <p class="font-semibold">
-                                                                    <span x-text="it.name"></span>
-                                                                    <span class="text-gray-500">(<span x-text="it.place"></span>)</span>
-                                                                </p>
-                                                                <p class="text-accent">
-                                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <p class="mt-4 text-gray-700" x-text="`“${it.text}”`"></p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Zdjęcie auta + ikona 3D -->
-                                                <div class="lg:col-span-2">
-                                                    <div class="relative h-40 w-full rounded-3xl bg-gradient-to-br from-black/60 to-black/20 ring-1 ring-accent/30 overflow-hidden">
-                                                        
-                                                        <!-- Ikona 3D placeholder -->
-                                                        <div class="absolute inset-0 flex items-center justify-center opacity-50">
-                                                            <img src="/img/voucherwww.png" alt="Ikona 3D auta"
-                                                                class="h-24 w-24 object-contain drop-shadow-lg">
-                                                        </div>
-
-                                                        <!-- Zdjęcie auta klienta -->
-                                                        <img :src="it.photo" alt="Auto klienta"
-                                                            class="absolute inset-0 h-full w-full object-cover hover:scale-105 transition-transform duration-500" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </template>
-                                </div>
-                            </div>
-
-                            <!-- Nawigacja -->
-                                <div class="mt-6 flex items-center justify-between">
-                                    <!-- Kropki -->
-                                    <div class="flex gap-2">
-                                        <template x-for="(it, idx) in items" :key="idx">
-                                            <button class="h-3 w-3 rounded-full bg-white/140 ring-2 ring-accent/70"
-                                                :class="{ 'bg-accent': i===idx }"
-                                                @click="i=idx"></button>
-                                        </template>
-                                    </div>
-
-                                    <!-- Strzałki -->
-                                    <div class="flex gap-4">
-                                        <button @click="i = (i-1+items.length)%items.length"
-                                            class="flex items-center justify-center rounded-full bg-accent text-black h-12 w-12 shadow-xl hover:scale-110 transition">
-                                            <i class="fa-solid fa-chevron-left text-lg"></i>
-                                        </button>
-                                        <button @click="i = (i+1)%items.length"
-                                            class="flex items-center justify-center rounded-full bg-accent text-black h-12 w-12 shadow-xl hover:scale-110 transition">
-                                            <i class="fa-solid fa-chevron-right text-lg"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Link do Google -->
-                <a href="https://www.google.com/search?q=detailing+wroclaw" 
-                class="mt-6 inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white">
-                <i class="fa-brands fa-google"></i>Zobacz więcej opinii w Google
-                </a>
-            </div>
-        </section>
-
-
-
-        
-        <!-- O nas / Perfekcja -->
-        <section id="o-nas" class="relative py-20 bg-gradient-to-b from-black to-brand-light/20">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="font-heading text-3xl sm:text-4xl font-semibold reveal" x-data
-                            x-init="$nextTick(()=>{ const el=$el; const io=new IntersectionObserver(([e])=>{ if(e.isIntersecting){ el.classList.add('revealed'); io.disconnect(); }},{threshold:.2}); io.observe(el); });">
-                            Perfekcja w każdym detalu</h2>
-                        <p class="mt-4 text-gray-300">Jesteśmy mistrzami precyzji i pasji na obrzeżach Wrocławia. Poznaj
-                            naszą historię i filozofię pracy – transparentnie i z sercem.</p>
-                        <div class="mt-6 grid grid-cols-3 gap-4">
-                            <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-4 text-center">
-                                <p class="text-3xl font-heading font-semibold text-accent">500+</p>
-                                <p class="text-xs text-gray-300">Zadowolonych klientów</p>
-                            </div>
-                            <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-4 text-center">
-                                <p class="text-3xl font-heading font-semibold text-accent">10</p>
-                                <p class="text-xs text-gray-300">Lat doświadczenia</p>
-                            </div>
-                            <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-4 text-center">
-                                <p class="text-3xl font-heading font-semibold text-accent">4.9/5</p>
-                                <p class="text-xs text-gray-300">Średnia ocena Google</p>
-                            </div>
-                        </div>
-                        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-bullseye text-accent mt-1"></i>
-                                <div>
-                                    <p class="font-medium">Precyzja</p>
-                                    <p class="text-sm text-gray-400">Dbałość o każdy detal i perfekcyjne wykończenie.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-heart text-accent mt-1"></i>
-                                <div>
-                                    <p class="font-medium">Pasja</p>
-                                    <p class="text-sm text-gray-400">Motoryzacja to nasza pasja – widać to w efektach.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-shield-halved text-accent mt-1"></i>
-                                <div>
-                                    <p class="font-medium">Jakość</p>
-                                    <p class="text-sm text-gray-400">Sprawdzone produkty premium i profesjonalny sprzęt.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fa-solid fa-handshake-angle text-accent mt-1"></i>
-                                <div>
-                                    <p class="font-medium">Zaufanie</p>
-                                    <p class="text-sm text-gray-400">Setki zadowolonych klientów i stałe rekomendacje.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="relative reveal" x-data
-                        x-init="$nextTick(()=>{ const el=$el; const io=new IntersectionObserver(([e])=>{ if(e.isIntersecting){ el.classList.add('revealed'); io.disconnect(); }},{threshold:.2}); io.observe(el); });">
-                        <img class="rounded-3xl ring-1 ring-white/10"
-                            src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1200&auto=format&fit=crop"
-                            alt="Studio detailingowe – wnętrze" />
-                        <div class="absolute -bottom-6 -right-6 hidden sm:block">
-                            <img class="w-60 rounded-3xl ring-1 ring-white/10"
-                                src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=800&auto=format&fit=crop"
-                                alt="Szczegół detailingu" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Proces -->
-        <section id="proces" class="py-20">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <h2 class="font-heading text-3xl sm:text-4xl font-semibold">Jak pracujemy</h2>
-                <p class="mt-3 text-gray-300">Transparentny proces w 5 krokach – od konsultacji po finalną kontrolę
-                    jakości.</p>
-                <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
-                        <div class="flex items-center gap-3"><i class="fa-solid fa-comments text-accent"></i>
-                            <h3 class="font-medium">Konsultacja</h3>
-                        </div>
-                        <p class="mt-2 text-sm text-gray-300">Zrozumienie potrzeb, wstępna wycena, dobór zakresu.</p>
-                    </div>
-                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
-                        <div class="flex items-center gap-3"><i class="fa-solid fa-bucket text-accent"></i>
-                            <h3 class="font-medium">Przygotowanie</h3>
-                        </div>
-                        <p class="mt-2 text-sm text-gray-200">Mycie, dekontaminacja, oklejenie elementów wrażliwych.</p>
-                    </div>
-                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
-                        <div class="flex items-center gap-3"><i class="fa-solid fa-wand-magic-sparkles text-accent"></i>
-                            <h3 class="font-medium">Aplikacja</h3>
-                        </div>
-                        <p class="mt-2 text-sm text-gray-300">Korekta lakieru, ceramika lub detailing wnętrza.</p>
-                    </div>
-                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
-                        <div class="flex items-center gap-3"><i class="fa-solid fa-magnifying-glass text-accent"></i>
-                            <h3 class="font-medium">Kontrola</h3>
-                        </div>
-                        <p class="mt-2 text-sm text-gray-300">Wielopunktowa kontrola jakości i wykończenie.</p>
-                    </div>
-                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
-                        <div class="flex items-center gap-3"><i class="fa-solid fa-hands-clapping text-accent"></i>
-                            <h3 class="font-medium">Finalizacja</h3>
-                        </div>
-                        <p class="mt-2 text-sm text-gray-300">Przekazanie auta i zalecenia pielęgnacji.</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -791,9 +548,7 @@
             </div>
         </section>
 
-        
-
-        <!-- Galeria / Realizacje -->
+          <!-- Galeria / Realizacje -->
         <section id="galeria" x-data="lightbox()" class="py-20 bg-brand-light/20">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <h2 class="font-heading text-3xl sm:text-4xl font-semibold reveal" x-data
@@ -838,6 +593,254 @@
                 </div>
             </div>
         </section>
+
+        <!-- Proces -->
+        <section id="proces" class="py-20">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <h2 class="font-heading text-3xl sm:text-4xl font-semibold">Jak pracujemy</h2>
+                <p class="mt-3 text-gray-300">Transparentny proces w 5 krokach – od konsultacji po finalną kontrolę
+                    jakości.</p>
+                <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-comments text-accent"></i>
+                            <h3 class="font-medium">Konsultacja</h3>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300">Zrozumienie potrzeb, wstępna wycena, dobór zakresu.</p>
+                    </div>
+                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-bucket text-accent"></i>
+                            <h3 class="font-medium">Przygotowanie</h3>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-200">Mycie, dekontaminacja, oklejenie elementów wrażliwych.</p>
+                    </div>
+                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-wand-magic-sparkles text-accent"></i>
+                            <h3 class="font-medium">Aplikacja</h3>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300">Korekta lakieru, ceramika lub detailing wnętrza.</p>
+                    </div>
+                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-magnifying-glass text-accent"></i>
+                            <h3 class="font-medium">Kontrola</h3>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300">Wielopunktowa kontrola jakości i wykończenie.</p>
+                    </div>
+                    <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-6">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-hands-clapping text-accent"></i>
+                            <h3 class="font-medium">Finalizacja</h3>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-300">Przekazanie auta i zalecenia pielęgnacji.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        
+        <!-- O nas / Perfekcja -->
+        <section id="o-nas" class="relative py-20 bg-gradient-to-b from-black to-brand-light/20">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="font-heading text-3xl sm:text-4xl font-semibold reveal" x-data
+                            x-init="$nextTick(()=>{ const el=$el; const io=new IntersectionObserver(([e])=>{ if(e.isIntersecting){ el.classList.add('revealed'); io.disconnect(); }},{threshold:.2}); io.observe(el); });">
+                            Perfekcja w każdym detalu</h2>
+                        <p class="mt-4 text-gray-300">Jesteśmy mistrzami precyzji i pasji na obrzeżach Wrocławia. Poznaj
+                            naszą historię i filozofię pracy – transparentnie i z sercem.</p>
+                        <div class="mt-6 grid grid-cols-3 gap-4">
+                            <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-4 text-center">
+                                <p class="text-3xl font-heading font-semibold text-accent">500+</p>
+                                <p class="text-xs text-gray-300">Zadowolonych klientów</p>
+                            </div>
+                            <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-4 text-center">
+                                <p class="text-3xl font-heading font-semibold text-accent">10</p>
+                                <p class="text-xs text-gray-300">Lat doświadczenia</p>
+                            </div>
+                            <div class="rounded-3xl border border-accent/160 bg-white/[0.25] p-4 text-center">
+                                <p class="text-3xl font-heading font-semibold text-accent">4.9/5</p>
+                                <p class="text-xs text-gray-300">Średnia ocena Google</p>
+                            </div>
+                        </div>
+                        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-bullseye text-accent mt-1"></i>
+                                <div>
+                                    <p class="font-medium">Precyzja</p>
+                                    <p class="text-sm text-gray-400">Dbałość o każdy detal i perfekcyjne wykończenie.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-heart text-accent mt-1"></i>
+                                <div>
+                                    <p class="font-medium">Pasja</p>
+                                    <p class="text-sm text-gray-400">Motoryzacja to nasza pasja – widać to w efektach.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-shield-halved text-accent mt-1"></i>
+                                <div>
+                                    <p class="font-medium">Jakość</p>
+                                    <p class="text-sm text-gray-400">Sprawdzone produkty premium i profesjonalny sprzęt.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-handshake-angle text-accent mt-1"></i>
+                                <div>
+                                    <p class="font-medium">Zaufanie</p>
+                                    <p class="text-sm text-gray-400">Setki zadowolonych klientów i stałe rekomendacje.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative reveal" x-data
+                        x-init="$nextTick(()=>{ const el=$el; const io=new IntersectionObserver(([e])=>{ if(e.isIntersecting){ el.classList.add('revealed'); io.disconnect(); }},{threshold:.2}); io.observe(el); });">
+                        <img class="rounded-3xl ring-1 ring-white/10"
+                            src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1200&auto=format&fit=crop"
+                            alt="Studio detailingowe – wnętrze" />
+                        <div class="absolute -bottom-6 -right-6 hidden sm:block">
+                            <img class="w-60 rounded-3xl ring-1 ring-white/10"
+                                src="https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=800&auto=format&fit=crop"
+                                alt="Szczegół detailingu" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Opinie - Premium Hook -->
+        <section id="opinie" x-data="{i:0, items:[
+            {name:'Pani Anna', place:'Wrocław-Krzyki', text:'Efekt przerósł oczekiwania – lakier wygląda jak nowy!', avatar:'https://picsum.photos/seed/rev-a/96/96', photo:'https://picsum.photos/seed/car-a/640/360'},
+            {name:'Pan Marek', place:'Bielany Wrocławskie', text:'Świetny kontakt i doradztwo. Auto wygląda premium.', avatar:'https://picsum.photos/seed/rev-b/96/96', photo:'https://picsum.photos/seed/car-b/640/360'},
+            {name:'Pani Ola', place:'Wrocław-Psie Pole', text:'Ceramika robi robotę, utrzymanie auta to bajka.', avatar:'https://picsum.photos/seed/rev-c/96/96', photo:'https://picsum.photos/seed/car-c/640/360'}
+        ]}" class="py-24">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="relative overflow-hidden rounded-3xl border border-accent/30 bg-gradient-to-br from-white/60 via-white/10 to-transparent">
+                    
+                    <!-- Efekty tła -->
+                    <div class="absolute inset-0 pointer-events-none">
+                        <div class="aurora absolute -top-10 -left-10 h-60 w-60 rounded-3xl bg-accent/55"></div>
+                        <div class="aurora absolute bottom-0 -right-10 h-72 w-72 rounded-3xl bg-accent/66"></div>
+                    </div>
+
+                    <div class="p-8 sm:p-12 lg:p-16 relative">
+                        
+                        <!-- Nagłówek -->
+                        <div class="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10">
+                            <div class="flex items-center gap-4">
+                                <div class="h-16 w-16 rounded-3xl bg-white flex items-center justify-center ring-1 ring-accent/40 shadow">
+                                    <i class="fa-solid fa-user text-accent text-xl"></i>
+                                </div>
+                                <div>
+                                    <h2 class="font-heading text-3xl sm:text-4xl font-semibold">Opinie klientów</h2>
+                                    <p class="text-gray-300 mt-1">Zaufanie budujemy efektami i relacją.</p>
+                                </div>
+                            </div>
+                            <div class="ml-auto">
+                                <a href="#cennik"
+                                    class="inline-flex items-center gap-2 rounded-3xl bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-hover btn-shine">
+                                    <i class="fa-solid fa-message"></i> Uzyskaj bezpłatną wycenę
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Slider -->
+                        <div class="mt-10 relative">
+                            <div class="overflow-hidden">
+                                <div class="flex transition-transform duration-500"
+                                    :style="`transform: translateX(-${i*100}%);`">
+                                    
+                                    <!-- Opinie -->
+                                    <template x-for="(it, idx) in items" :key="idx">
+                                        <div class="min-w-full">
+                                            <div class="grid lg:grid-cols-5 gap-8 items-center">
+                                                
+                                                <!-- Tekst opinii -->
+                                                <div class="lg:col-span-3">
+                                                    <div class="rounded-2xl bg-white p-6 text-gray-900 shadow-xl ring-1 ring-accent/20">
+                                                        <div class="flex items-center gap-4">
+                                                            <div class="h-12 w-12 rounded-3xl bg-white ring-1 ring-accent/30 flex items-center justify-center overflow-hidden">
+                                                                <img :src="it.avatar" alt="Klient"
+                                                                    class="h-full w-full object-cover rounded-full" />
+                                                            </div>
+                                                            <div>
+                                                                <p class="font-semibold">
+                                                                    <span x-text="it.name"></span>
+                                                                    <span class="text-gray-500">(<span x-text="it.place"></span>)</span>
+                                                                </p>
+                                                                <p class="text-accent">
+                                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <p class="mt-4 text-gray-700" x-text="`“${it.text}”`"></p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Zdjęcie auta + ikona 3D -->
+                                                <div class="lg:col-span-2">
+                                                    <div class="relative h-40 w-full rounded-3xl bg-gradient-to-br from-black/60 to-black/20 ring-1 ring-accent/30 overflow-hidden">
+                                                        
+                                                        <!-- Ikona 3D placeholder -->
+                                                        <div class="absolute inset-0 flex items-center justify-center opacity-50">
+                                                            <img src="/img/voucherwww.png" alt="Ikona 3D auta"
+                                                                class="h-24 w-24 object-contain drop-shadow-lg">
+                                                        </div>
+
+                                                        <!-- Zdjęcie auta klienta -->
+                                                        <img :src="it.photo" alt="Auto klienta"
+                                                            class="absolute inset-0 h-full w-full object-cover hover:scale-105 transition-transform duration-500" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+
+                            <!-- Nawigacja -->
+                                <div class="mt-6 flex items-center justify-between">
+                                    <!-- Kropki -->
+                                    <div class="flex gap-2">
+                                        <template x-for="(it, idx) in items" :key="idx">
+                                            <button class="h-3 w-3 rounded-full bg-white/140 ring-2 ring-accent/70"
+                                                :class="{ 'bg-accent': i===idx }"
+                                                @click="i=idx"></button>
+                                        </template>
+                                    </div>
+
+                                    <!-- Strzałki -->
+                                    <div class="flex gap-4">
+                                        <button @click="i = (i-1+items.length)%items.length"
+                                            class="flex items-center justify-center rounded-full bg-accent text-black h-12 w-12 shadow-xl hover:scale-110 transition">
+                                            <i class="fa-solid fa-chevron-left text-lg"></i>
+                                        </button>
+                                        <button @click="i = (i+1)%items.length"
+                                            class="flex items-center justify-center rounded-full bg-accent text-black h-12 w-12 shadow-xl hover:scale-110 transition">
+                                            <i class="fa-solid fa-chevron-right text-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Link do Google -->
+                <a href="https://www.google.com/search?q=detailing+wroclaw" 
+                class="mt-6 inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white">
+                <i class="fa-brands fa-google"></i>Zobacz więcej opinii w Google
+                </a>
+            </div>
+        </section>
+
+
+
 
         <!-- Sekcja FAQ -->
 <section id="faq" class="py-20 bg-brand-light/20">
