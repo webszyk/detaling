@@ -1,8 +1,10 @@
 
 
 ## Project info - premium detaling cards 
+- wykonanie [www.webszyk.pl](https://www.webszyk.pl)
 
-<img width="560" height="8533" alt="cursor-v-1-layout" src="https://github.com/user-attachments/assets/76d0e313-f6fd-4a07-8190-4f5dbe603aad" />
+<img width="560" height="8505" alt="layout2" src="https://github.com/user-attachments/assets/f06ea80d-a763-42a3-9dc0-72fa5cebda3d" />
+
 
 
 This project is built with:
@@ -12,4 +14,6 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+
+- wykonanie [www.webszyk.pl](https://www.webszyk.pl)
 
